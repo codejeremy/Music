@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.edu.nc.music.PlayPage">
+
+    <View
+        android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerVertical="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/strut"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_play_back">
+
+        <ImageView
+            android:id="@+id/playback"
+            android:layout_width="21dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/ic_searchgoback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="10dp"
+            android:text="在多年以后"
+            android:textColor="@color/colormain"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="173dp"
+            android:layout_marginTop="35dp"
+            android:text="仇心诚"
+            android:textColor="@color/colormain"
+            android:textSize="15dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@id/strut"
+        android:background="@drawable/ic_play_backxia">
+
+        <FrameLayout
+            android:id="@+id/main_framecontent2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="UnknownId">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/playjiemian"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_gravity="bottom"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/ic_play_chance" />
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ic_play_nextsongleft" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="29dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/ic_play_play" />
+
+                <ImageView
+                    android:layout_width="56dp"
+                    android:layout_height="54dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/ic_play_nextsongright" />
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/ic_play_maikefeng" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="138dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/ic_play_heart" />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="27dp"
+                    android:layout_marginLeft="68dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@drawable/ic_play_xiazai" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
