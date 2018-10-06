@@ -5,16 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cn.edu.nc.music.fragment_challenge">
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:layout_marginTop="194dp"
+        >
         <TextView
+            android:id="@+id/main_textview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="快来向你的偶像发起挑战~"
+            android:layout_height="40dp"
             android:gravity="center"
-            />
-    </FrameLayout>
+            android:text="我的音乐" />
+        <ListView
+            android:id="@+id/main_listview"
+            android:layout_below="@+id/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
 </LinearLayout>

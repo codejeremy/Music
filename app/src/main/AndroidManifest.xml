@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.edu.nc.music">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".fragment_challenge" />
         <activity android:name=".fragment_paihang" />
-        <activity android:name=".fragment_yueguan" />
+        <activity android:name=".fragment_yueguan"
+            android:screenOrientation="landscape"
+            />
         <activity
             android:name=".search"
             android:theme="@style/AppTheme" />

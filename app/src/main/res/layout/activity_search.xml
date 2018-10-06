@@ -27,12 +27,16 @@
             android:background="@drawable/shape3"
             android:layout_marginLeft="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="8dp"
-                android:hint="请输入歌曲/歌手名"/>
+           <EditText
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_marginLeft="5dp"
+               android:layout_gravity="center"
+               android:paddingTop="1dp"
+               android:hint="请输入歌曲/歌手名"
+               android:textSize="14dp"
+               android:background="@null"
+               />
             <ImageView
                 android:id="@+id/challenge_search"
                 android:layout_width="28dp"
@@ -81,7 +85,7 @@
             <ImageView
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/ic_main_touxiang"
+                android:background="@drawable/maobuyi"
                 android:layout_marginTop="12dp"/>
             <TextView
                 android:layout_width="wrap_content"

@@ -11,12 +11,13 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         try {
-            Thread.sleep(2000);
+            Thread.sleep(300);
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        Splash.this.finish();
     }
 }

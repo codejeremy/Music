@@ -3,6 +3,8 @@ package cn.edu.nc.music;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,11 +22,14 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.ViewTarget;
+
+import java.util.List;
 
 import javax.microedition.khronos.opengles.GL;
 
@@ -40,6 +45,8 @@ public class MainActivity extends AppCompatActivity
     private FrameLayout tiaozhan;
     private LinearLayout navHeaderLl;
     private ImageView headerImg;
+    private ListView mListView;
+    private List<Song>list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +58,8 @@ public class MainActivity extends AppCompatActivity
         main_search = findViewById(R.id.main_search);
         singers = findViewById(R.id.singer);
 
-
-
+        /*
+        * 查找跳转*/
         main_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +67,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
+        /*播放界面跳转*/
         singers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +87,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        /*glide渲染将侧滑的图片添加进去*/
         navHeaderLl = (LinearLayout) navigationView.inflateHeaderView(R.layout.nav_header_main);
         headerImg = navHeaderLl.findViewById(R.id.header_img);
         Glide.with(this).load(R.mipmap.slide_user).into(headerImg);
@@ -94,13 +102,13 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    //碎片
+    //碎片数据的获取
     public void initDate() {
         yueguan.setOnClickListener((View.OnClickListener) this);
         paihang.setOnClickListener((View.OnClickListener) this);
         tiaozhan.setOnClickListener((View.OnClickListener) this);
     }
-
+    /*点击切换碎片界面*/
     public void Clickyg() {
         fragmentyueguan = new fragment_yueguan();
         android.support.v4.app.FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
@@ -125,6 +133,7 @@ public class MainActivity extends AppCompatActivity
         yueguan.setSelected(true);
     }
 
+    /*侧滑*/
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -134,7 +143,7 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
+    /*侧滑内容点击事件*/
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -164,7 +173,7 @@ public class MainActivity extends AppCompatActivity
         //drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
+    /*界面点击事件*/
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -178,5 +187,8 @@ public class MainActivity extends AppCompatActivity
                 Clicktz();
                 break;
         }
+    }
+    private void initView(){
+
     }
 }
