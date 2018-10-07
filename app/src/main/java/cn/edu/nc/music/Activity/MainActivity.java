@@ -1,52 +1,40 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.Activity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.provider.ContactsContract;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.ViewTarget;
 
-import java.util.List;
-
-import javax.microedition.khronos.opengles.GL;
+import cn.edu.nc.music.Fragment.FragmentChallenge;
+import cn.edu.nc.music.Fragment.FragmentPaihang;
+import cn.edu.nc.music.Fragment.FragmentYueguan;
+import cn.edu.nc.music.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private ImageView main_search;
     private FrameLayout singers;
-    private fragment_yueguan fragmentyueguan;
-    private fragment_paihang fragmentPaihang;
-    private fragment_challenge fragmentChallenge;
+    private FragmentYueguan fragmentyueguan;
+    private FragmentPaihang fragmentPaihang;
+    private FragmentChallenge fragmentChallenge;
     private FrameLayout yueguan;
     private FrameLayout paihang;
     private FrameLayout tiaozhan;
     private LinearLayout navHeaderLl;
     private ImageView headerImg;
-    private ListView mListView;
-    private List<Song>list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +98,7 @@ public class MainActivity extends AppCompatActivity
     }
     /*点击切换碎片界面*/
     public void Clickyg() {
-        fragmentyueguan = new fragment_yueguan();
+        fragmentyueguan = new FragmentYueguan();
         android.support.v4.app.FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_framecontent, fragmentyueguan);
         fragmentTransaction.commit();
@@ -118,7 +106,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void Clickph() {
-        fragmentPaihang = new fragment_paihang();
+        fragmentPaihang = new FragmentPaihang();
         android.support.v4.app.FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_framecontent, fragmentPaihang);
         fragmentTransaction.commit();
@@ -126,7 +114,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void Clicktz() {
-        fragmentChallenge = new fragment_challenge();
+        fragmentChallenge = new FragmentChallenge();
         android.support.v4.app.FragmentTransaction fragmentTransaction = this.getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.main_framecontent, fragmentChallenge);
         fragmentTransaction.commit();
@@ -188,7 +176,5 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
-    private void initView(){
 
-    }
 }

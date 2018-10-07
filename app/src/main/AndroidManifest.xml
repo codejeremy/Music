@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.edu.nc.music">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -11,19 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".fragment_challenge" />
-        <activity android:name=".fragment_paihang" />
-        <activity android:name=".fragment_yueguan"
-            android:screenOrientation="landscape"
-            />
+        <activity android:name=".Fragment.FragmentChallenge" />
+        <activity android:name=".Fragment.FragmentPaihang" />
         <activity
-            android:name=".search"
+            android:name=".Fragment.FragmentYueguan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.search"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Splash"
+            android:name=".StartPage.Splash"
             android:theme="@style/ThemeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,9 +33,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlayPage"
+            android:name=".Activity.PlayPage"
             android:theme="@style/ThemePlay" />
-        <activity android:name=".FragmentPlayCi"></activity>
+        <activity android:name=".Fragment.FragmentPlayCi" />
+        <activity android:name=".Activity.ItemMusicListviewActivity"></activity>
     </application>
 
 </manifest>

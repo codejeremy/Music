@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.edu.nc.music.fragment_paihang">
+    tools:context="cn.edu.nc.music.Fragment.FragmentPaihang">
     <ScrollView
         android:id="@+id/paihanghuadong"
         android:layout_width="match_parent"

@@ -1,8 +1,12 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.StartPage;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import cn.edu.nc.music.Activity.MainActivity;
+import cn.edu.nc.music.R;
+
 // 启动页
 public class Splash extends AppCompatActivity {
 

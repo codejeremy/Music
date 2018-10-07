@@ -1,4 +1,4 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -8,7 +8,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +16,10 @@ import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import cn.edu.nc.music.GaosiDim.FastBlur;
+import cn.edu.nc.music.Fragment.FragmentPlayCi;
+import cn.edu.nc.music.R;
 
 public class PlayPage extends AppCompatActivity implements View.OnClickListener {
 
@@ -78,8 +81,8 @@ public class PlayPage extends AppCompatActivity implements View.OnClickListener 
     @SuppressLint("NewApi")
     private void blur(Bitmap bkg, View view) {
         long startMs = System.currentTimeMillis();
-        float scaleFactor = 8;
-        float radius = 20;
+        float scaleFactor = 10;
+        float radius = 12;
 
         Bitmap overlay = Bitmap.createBitmap(
                 (int) (view.getMeasuredWidth() / scaleFactor),

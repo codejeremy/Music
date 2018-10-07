@@ -1,10 +1,12 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.Fragment;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import cn.edu.nc.music.R;
 
 public class FragmentPlayCi extends android.support.v4.app.Fragment implements View.OnClickListener {
 

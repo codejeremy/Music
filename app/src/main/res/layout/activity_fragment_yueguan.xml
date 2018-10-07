@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="194dp"
-    tools:context="cn.edu.nc.music.fragment_yueguan">
+    tools:context="cn.edu.nc.music.Fragment.FragmentYueguan">
 
    <!-- <FrameLayout
         android:layout_width="match_parent"

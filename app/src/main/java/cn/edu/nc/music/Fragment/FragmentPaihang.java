@@ -1,4 +1,4 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.Fragment;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class fragment_paihang extends android.support.v4.app.Fragment implements View.OnClickListener {
+import cn.edu.nc.music.R;
+
+public class FragmentPaihang extends android.support.v4.app.Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

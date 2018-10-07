@@ -1,4 +1,4 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
+import cn.edu.nc.music.R;
 
 public class search extends AppCompatActivity {
     private FrameLayout singer;

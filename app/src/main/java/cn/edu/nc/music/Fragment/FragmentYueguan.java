@@ -1,4 +1,4 @@
-package cn.edu.nc.music;
+package cn.edu.nc.music.Fragment;
 
 import android.provider.ContactsContract;
 import android.support.v4.app.Fragment;
@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-public class fragment_yueguan extends android.support.v4.app.Fragment implements View.OnClickListener {
+import cn.edu.nc.music.R;
+
+public class FragmentYueguan extends android.support.v4.app.Fragment implements View.OnClickListener {
     private LinearLayout song;
     private LinearLayout singer;
 
